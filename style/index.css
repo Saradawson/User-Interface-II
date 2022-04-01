@@ -51,8 +51,8 @@ table {
     padding: 0;
     margin: 0;
     max-width: 100%;
-    border:1px solid grey;
-  } */
+    border:1px solid grey; */
+  }
 /* Add CSS styling here */
 /* general */
 html{
@@ -62,11 +62,6 @@ body{
     font-size: 1.6rem;
     line-height: 1.5rem;
     background-color: pink;
-}
-section{
-    padding: 1%;
-    width: 100%;
-    margin: 0;
 }
 /* header */
 header{
@@ -97,36 +92,22 @@ header #introduction{
     font-family: sans-serif serif;
 }
 /* introduction */
-#introduction{
+.introduction {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    padding: 1%;
     align-items: flex-end;
 }
-.img{
-    width: 50%;
-    padding: 1%;
-    background-color: rgb(244, 129, 148);
-}
-.main-img{
-    width: 100%;
-}
 .text{
-    display: flex;
-    flex-direction: column;
-    padding: 0 5%;
-    margin-top: 1%;
-    gap: 3%;
-    height: 65%;
-    width: 100%;
-    height: 100%; 
+    text-align: center;
+    padding: 1%;
 }
 h2{
     font-size: 2rem;
-    padding: 1%;
 }
 p{
     font-size: 1.5rem;
-    padding: 4%;
+    padding: 1%;
 }
 .my-projects{
     width: 25%;
@@ -134,25 +115,15 @@ p{
     background-color: green;
     color: white;
 }
-/* boxes */
-.boxes{
+/* section */
+.row{
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-evenly;
-    object-fit: cover;
+    flex-flow: row;
+    padding: 1%;
 }
 .box{
-    width: 22%;
     text-align: center;
-    font-family: sans-serif serif;
-}
-.box-img{
-    max-height: 12rem;
-    width: 100%;
-    object-fit: cover;
-}
-h3{
-    padding: 2%;
 }
 /* footer */
 footer{
@@ -175,6 +146,49 @@ h2{
 }
 .socials{
     padding-top: 2%;
+}
+
+@media(max-width: 800px){
+    footer{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }    
+}
+
+@media(max-width: 500px){
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+a{
+    width:100%;
+    text-align: center;
+    margin: 2% 0;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.introduction div{
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 }
 
  
